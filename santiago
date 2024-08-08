@@ -1,0 +1,8 @@
+grep -r --include="*.txt" -c "Alice" /home/admin | awk -F: '{sum+=$2} END {print sum}'
+#411
+grep -r --include="*.txt" -l "Alice" /home/admin | xargs grep -c "Alice" | awk -F: '$2 == 1 {print $1}'
+#/home/admin/1342-0.txt 
+grep -n "Alice" /home/admin/1342-0.txt 
+nano /home/admin/1342-0.txt 
+#156
+echo "411156" > /home/admin/solution
