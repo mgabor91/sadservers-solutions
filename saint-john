@@ -1,0 +1,2 @@
+lsof | { head -1 ; grep bad.log ; }
+kill 586
